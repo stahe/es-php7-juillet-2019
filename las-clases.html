@@ -1776,7 +1776,7 @@
   </li>
   <li>línea 16: muestra la <i>persona $p</i>. Para que se muestre, el valor de la variable $p debe transformarse en una cadena de caracteres. Implícitamente, es el método <b>[Personne.__toString] </b>el que se ejecuta entonces. Por lo tanto, este debe devolver una cadena de caracteres;
   </li>
-  <li>hemos visto que el constructor de la clase <b>[Personne] </b>podía lanzar una excepción de tipo <b>[\Exception]</b>. Por lo tanto, hay que gestionar esta excepción. Por eso, el código de la línea 14 está incompleto. Hay que utilizar el de las líneas 18-24 para gestionar correctamente la excepción que pueda producirse. Aquí generamos una a propósito pasando una edad que no es un entero. En este caso concreto, la excepción que se produce es lanzada por el intérprete PHP y no por el código de la clase <b>[Personne]</b>. De hecho, la firma del método <b>[Personne.__construct] </b>es la siguiente:
+  <li>hemos visto que el constructor de la clase <b>[Personne] </b>puede lanzar una excepción de tipo <b>[\Exception]</b>. Por lo tanto, hay que gestionar esta excepción. Por eso, el código de la línea 14 está incompleto. Hay que utilizar el de las líneas 18-24 para gestionar correctamente la excepción que pueda producirse. Aquí generamos una a propósito pasando una edad que no es un entero. En este caso concreto, la excepción que se produce es lanzada por el intérprete PHP y no por el código de la clase <b>[Personne]</b>. De hecho, la firma del método <b>[Personne.__construct] </b>es la siguiente:
   </li>
 </ul>
 
@@ -2565,7 +2565,7 @@
 
 <p><strong><span style="color: #000000">Comentarios</span></strong></p>
 <ul>
-  <li><span style="color: #000000">línea 5: se declara un atributo </span><b><span style="color: #000000">estático </span></b><span style="color: #000000">que contará el número de instancias de la clase </span><b><span style="color: #000000">[Classe1] </span></b><span style="color: #000000">creadas. No se trata de un atributo que pueda pertenecer a una instancia de la clase. De hecho, si se crean dos </span><span style="color: #000000">objetos O1 y O2, ninguno de los dos tiene conocimiento del otro. Tener un contador en la instancia no tiene sentido: cuando se crea un nuevo objeto, ¿en qué instancia se va a incrementar el contador? Nos veríamos obligados a incrementar el contador de un objeto concreto, dejando de lado los contadores de las demás instancias. Un atributo </span><b><span style="color: #000000">estático </span></b><span style="color: #000000">es un atributo de clase y no de instancia de la clase;</span>
+  <li><span style="color: #000000">línea 5: se declara un atributo </span><b><span style="color: #000000">estático </span></b><span style="color: #000000">que contará el número de instancias de la clase </span><b><span style="color: #000000">[Classe1] </span></b><span style="color: #000000">creadas. No se trata de un atributo que pueda pertenecer a una instancia de la clase. De hecho, si se crean dos objetos O1 y O2, ninguno de los dos tiene conocimiento del otro. Tener un contador en la instancia no tiene sentido: cuando se crea un nuevo objeto, ¿en qué instancia se va a incrementar el contador? Nos veríamos obligados a incrementar el contador de un objeto concreto, dejando de lado los contadores de las demás instancias. Un atributo </span><b><span style="color: #000000">estático </span></b><span style="color: #000000">es un atributo de clase y no de instancia de la clase;</span>
   </li>
   <li><span style="color: #000000">líneas 7-10: es en el constructor donde se contarán los objetos creados, ya que la creación de cada nuevo objeto provoca la ejecución del constructor;</span>
   </li>
@@ -2996,7 +2996,7 @@
 
 <p>Este es el comportamiento esperado.</p>
 <ul>
-  <li>que la instancia <b>[$this] </b>de una clase hija, utilizada en un método de la clase padre, ve:
+  <li>que la instancia <b>[$this] </b>de una clase hija, utilizada en un método de la clase padre, vea:
     <ul>
       <li>los atributos y métodos de la clase padre, independientemente de su visibilidad;
       </li>
@@ -3006,7 +3006,7 @@
   </li>
 </ul>
 
-<p>Este es un comportamiento inesperado.</p>
+<p>Se trata de un comportamiento inesperado.</p>
 <p><span id="refheadingtoc185649971629160" name="refheadingtoc185649971629160" class="odt-bookmark-anchor"></span>
 <span id="toc42690644" name="toc42690644" class="odt-bookmark-anchor"></span>
 <span id="toc42690258" name="toc42690258" class="odt-bookmark-anchor"></span>
@@ -3358,7 +3358,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&quot;prénom&quot; <span style="color:#000000">=&gt; </span>&quot;Sylvain&quot;<span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#0000c0">&quot;âge&quot; </span>=&gt; 17</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  ]);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// instanciación e inicialización de hijo2</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// instanciación e inicialización del hijo2</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">$enfant2 = (<span style="font-weight:bold;color:#7f0055">new </span><span style="color:#005032">Personne2</span>())-&gt;setFromArray([</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&quot;nom&quot; <span style="color:#000000">=&gt; </span>&quot;Bertholomé&quot;<span style="color:#000000">,</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span>&quot;prénom&quot; <span style="color:#000000">=&gt; </span>&quot;Géraldine&quot;<span style="color:#000000">,</span></span></span>

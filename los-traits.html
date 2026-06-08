@@ -1209,7 +1209,7 @@
 <span id="toc42690288" name="toc42690288" class="odt-bookmark-anchor"></span>
 <span id="toc42689902" name="toc42689902" class="odt-bookmark-anchor"></span></p>
 <h2 id="93-usar-un-mismo-trait-en-diferentes-clases">9.3. <span style="color: #4f81bd">Usar un mismo trait en diferentes clases</span></h2>
-<p>Una de las principales ventajas de <strong>los traits</strong> parece ser la reutilización del mismo código (atributos + métodos) entre diferentes clases. Sin embargo, veremos que se puede lograr el mismo objetivo utilizando clases simples.</p>
+<p>Una de las principales ventajas de <strong>la característica</strong> parece ser la reutilización del mismo código (atributos + métodos) entre diferentes clases. Sin embargo, veremos que se puede lograr el mismo objetivo utilizando clases simples.</p>
 <p>El uso compartido de un <em>trait</em> entre clases se ilustra con el siguiente script <strong>[trait-02.php]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
@@ -1388,7 +1388,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// test01 ----------------</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// prueba01 ----------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">function</span><span style="color:#008080"> </span>test01():<span style="color:#008080"> </span>void<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// dos objetos</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$class02</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="font-weight:bold">new</span><span style="color:#008080"> </span>Class02();</span></span>
@@ -1467,7 +1467,7 @@
 </code></pre></div></td></tr></table></div>
 <p><strong>Comentarios sobre los resultados</strong></p>
 <ul>
-  <li>líneas 2-5: se obtienen los mismos resultados que con el trait <b>[Trait01]</b>. Se concluye que el uso del trait no es aquí indispensable, pero que conlleva una reducción del código debido a que no se necesitan métodos para acceder a los atributos del trait: estos forman parte integrante del código en el que se ha incorporado el trait;
+  <li>líneas 2-5: se obtienen los mismos resultados que con el trait <b>[Trait01]</b>. Se deduce que el uso del trait no es aquí indispensable, pero que conlleva una reducción del código debido a que no se necesitan métodos para acceder a los atributos del trait: estos forman parte integrante del código en el que se ha incorporado el trait;
   </li>
   <li>líneas 7-10: dado que se ha inyectado la misma referencia de <b>[Class01] </b>en las clases <b>[Class02] </b>y <b> [Class03]</b>, el atributo <b>[Class01::id] </b>se ha compartido entre ambas clases. Por eso, la línea 9 de los resultados muestra 20 en lugar de 10 con el trait. De ello se deduce que, si los atributos del trait deben <b>compartirse </b>entre clases, entonces el trait no es utilizable y hay que recurrir a una clase;
   </li>
@@ -1872,7 +1872,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">return</span><span style="color:#008080"> </span><span style="color:#0000ff">$this</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// Implementación doSomethingElse</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// implementación doSomethingElse</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">public</span><span style="color:#008080"> </span><span style="font-weight:bold">function</span><span style="color:#008080"> </span>doSomethingElse():<span style="color:#008080"> </span>void<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#000000">print</span><span style="color:#008080"> </span>&quot;Class1::doSomethingElse [$this-&gt;attr1,$this-&gt;attr2,$this-&gt;attr3]\n&quot;<span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">}</span></span></span>
@@ -2042,7 +2042,7 @@
     <ul>
       <li>línea 10: el rasgo <b>[Trait1] </b>no implementa la interfaz <b>[Interface1]</b>. Esto es sintácticamente imposible;
       </li>
-      <li>líneas 12-13: el atributo de visibilidad <b>[protected] </b>de los atributos de la clase abstracta <b>[AbstractClass] </b>pasa a ser aquí <b>[private]</b>. Estos dos atributos tienen por objeto proporcionar a las clases derivadas acceso directo a los atributos de la clase padre (protected) o del rasgo (private) sin tener que pasar por los getter y setter;
+      <li>líneas 12-13: el atributo de visibilidad <b>[protected] </b>de los atributos de la clase abstracta <b>[AbstractClass] </b>pasa a ser aquí <b>[private]</b>. Estos dos atributos tienen por objeto proporcionar a las clases derivadas acceso directo a los atributos de la clase padre (protected) o del rasgo (private) sin tener que pasar por los getters y setters;
       </li>
       <li>el rasgo <b>[Trait1] </b>no declara el método abstracto <b>[doSomethingElse]</b>;
       </li>

@@ -1326,7 +1326,7 @@
     <ul>
       <li><b>[limites] </b>(8) de tipo número decimal (9) de 10 dígitos, 2 de ellos decimales (10), contendrá los elementos de la columna 17 de los tramos impositivos;
       </li>
-      <li><b>[coeffR] </b>(11) de tipo número decimal (12) de 6 dígitos, 2 de ellos decimales (13), contendrá los elementos de la columna 18 de los tramos impositivos;
+      <li><b>[coeffR] </b>(11) de tipo número decimal (12) de 6 cifras, 2 de ellas decimales (13), contendrá los elementos de la columna 18 de los tramos impositivos;
       </li>
       <li><b>[coeffN] </b>(14), de tipo número decimal (15) de 10 dígitos, 2 de los cuales son decimales (16), contendrá los elementos de la columna 19 de los tramos impositivos;
       </li>
@@ -1494,7 +1494,7 @@
 
 <p>El version 05 tiene dos objetivos distintos:</p>
 <ul>
-  <li>llenar la base MySQL <b>[dbimpots-2019] </b>con el contenido del archivo jSON <b>[Data/txadmindata.json]</b>;
+  <li>rellenar la base MySQL <b>[dbimpots-2019] </b>con el contenido del archivo jSON <b>[Data/txadmindata.json]</b>;
   </li>
   <li>implementar el cálculo del impuesto con datos fiscales que ahora proceden de la base MySQL <b>[dbimpots-2019]</b>;
   </li>
@@ -1779,7 +1779,7 @@
   </li>
   <li>líneas 9-41: el atributo <b>[$arrayOfAttributes] </b>se inicializa a partir del archivo jSON <b>[$jsonFilename] </b>pasado como parámetro. Se lanza una excepción de tipo <b>[ExceptionImpot] </b>si no se ha podido leer el archivo jSON o si no es un archivo jSON válido;
   </li>
-  <li>líneas 36-38: aquí hay un código especial si lo ejecuta una clase hija. En este caso, <b>[$this] </b>representa una instancia de la clase hija <b>[Database, TaxAdminData, TaxPayerData] </b>y, en este caso, <b>las líneas 36-38 inicializan los atributos de esta clase hija, </b>siempre que dichos atributos tengan visibilidad <b>protected </b>(o pública) (véase el párrafo <a href="las-clases.html#visibiliteentreclasse"><u><span style="color: #0563c1">enlace</span></u></a>). De hecho, se ha dicho que los atributos de las entidades <b>[Database, TaxAdminData, TaxPayerData] </b>eran los mismos que los atributos del archivo jSON que encapsulaban. Por último, el método <b>[setFromJsonFile] </b>permite que una clase hija se inicialice a partir de un archivo jSON;
+  <li>líneas 36-38: aquí hay un código especial si lo ejecuta una clase hija. En este caso, <b>[$this] </b>representa una instancia de la clase hija <b>[Database, TaxAdminData, TaxPayerData] </b>y, en este caso, <b>las líneas 36-38 inicializan los atributos de esta clase hija, </b>siempre que dichos atributos tengan la visibilidad <b>protected </b>(o pública) (véase el párrafo <a href="las-clases.html#visibiliteentreclasse"><u><span style="color: #0563c1">enlace</span></u></a>). De hecho, se ha dicho que los atributos de las entidades <b>[Database, TaxAdminData, TaxPayerData] </b>eran los mismos que los atributos del archivo jSON que encapsulaban. Por último, el método <b>[setFromJsonFile] </b>permite que una clase hija se inicialice a partir de un archivo jSON;
   </li>
   <li>línea 40: se devuelve el objeto <b>[$this], </b>es decir, una instancia de la clase hija, si el método <b>[setFromJsonFile] </b>ha sido llamado por una clase hija;
   </li>
@@ -2134,7 +2134,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">class </span><span style="color:#005032">DaoTransferAdminDataFromJsonFile2Database</span><span style="color:#000000"> </span><span style="font-weight:bold;color:#7f0055">implements </span><span style="color:#005032">InterfaceDao4TransferAdminData2Database</span><span style="color:#000000"> {</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// atributos de la base de datos de destino</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span><span style="color:#0000c0">$database</span><span style="color:#000000">;</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// datos de la administración tributaria</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// Datos de la administración tributaria</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span><span style="color:#0000c0">$taxAdminData</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// fabricante</span></span></span>
@@ -2324,7 +2324,7 @@
   </li>
   <li>líneas 9-31: preparación de la orden de inserción SQL. Es compleja debido a que hay 10 columnas que inicializar en esta operación de inserción y a que hay que buscar los nombres de las columnas en el atributo <b>[$database]</b>;
   </li>
-  <li>líneas 33-44: ejecución de la orden de inserción. Solo hay una línea que insertar. Una vez más, el código se complica porque hay que buscar los valores que se van a insertar en el atributo <b>[$taxAdminData]</b>;
+  <li>líneas 33-44: ejecución de la orden de inserción. Solo hay una línea que insertar. Una vez más, el código se complica porque hay que buscar los valores a insertar en el atributo <b>[$taxAdminData]</b>;
   </li>
 </ul>
 
@@ -2651,7 +2651,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    $this-&gt;saveString($resultsFilename, $string);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// almacenamiento de los resultados de una tabla en un archivo de texto</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// registro de los resultados de una tabla en un archivo de texto</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#000000">  </span><span style="font-weight:bold;color:#008040">private </span><span style="font-weight:bold;color:#7f0055">function</span><span style="color:#000000"> saveString(</span><span style="font-weight:bold;color:#7f0055">string </span><span style="color:#000000">$fileName, </span><span style="font-weight:bold;color:#7f0055">string </span><span style="color:#000000">$data): </span><span style="font-weight:bold;color:#7f0055">void </span><span style="color:#000000">{</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// guardar la cadena [$data] en el archivo de texto [$fileName]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// si el archivo de texto [$fileName] no existe, se crea</span></span></span>
@@ -2699,7 +2699,7 @@
   </li>
   <li>línea 41: se devuelve la matriz de objetos <b>[TaxPayerData] </b>construidos: ese era el objetivo del método;
   </li>
-  <li>líneas 44-83: el método privado <b>[check] </b>comprueba la validez de los parámetros <b>[marié, enfants, salaire] </b>de la matriz <b>[$attributesOfTaxPayerData] </b>pasada como parámetro en la línea 44. Si hay atributos erróneos, los acumula en la matriz <b>[$attributes] </b>(líneas 47, 53, 60, 70) en forma de una matriz <b>[‘attribut erroné’=&gt; valeur de l’attribut erroné]</b>;
+  <li>líneas 44-83: el método privado <b>[check] </b>comprueba la validez de los parámetros <b>[marié, enfants, salaire] </b>de la matriz <b>[$attributesOfTaxPayerData] </b>pasada como parámetro en la línea 44. Si hay atributos erróneos, los acumula en la tabla <b>[$attributes] </b>(líneas 47, 53, 60, 70) en forma de una tabla <b>[‘attribut erroné’=&gt; valeur de l’attribut erroné]</b>;
   </li>
   <li>línea 78: si hay errores, se devuelve una tabla <b>[‘erreurs’=&gt;$attributes]</b>;
   </li>
@@ -2809,7 +2809,7 @@
   </li>
   <li><span style="color: #000000">línea 20: se crea el objeto </span><b><span style="color: #000000">[$this→taxAdminData] </span></b><span style="color: #000000">que el constructor debe inicializar;</span>
   </li>
-  <li><span style="color: #000000">líneas 22-26: se abre la conexión a la base de datos. Obsérvese la notación </span><b><span style="color: #000000">[\PDO] </span></b><span style="color: #000000">para designar la clase </span><b><span style="color: #000000">[PDO] </span></b><span style="color: #000000">de PHP. De hecho, como nos encontramos en el espacio de nombres </span><b><span style="color: #000000">[Application]</span></b><span style="color: #000000">, si escribiéramos simplemente </span><b><span style="color: #000000">[PDO]</span></b><span style="color: #000000">, este nombre relativo llevaría como prefijo el espacio de nombres actual y, por lo tanto, daría lugar a la clase </span><b><span style="color: #000000">[Application\PDO], </span></b><span style="color: #000000">que no existe;</span>
+  <li><span style="color: #000000">líneas 22-26: se abre la conexión a la base de datos. Obsérvese la notación </span><b><span style="color: #000000">[\PDO] </span></b><span style="color: #000000">para designar la clase </span><b><span style="color: #000000">[PDO] </span></b><span style="color: #000000">de PHP. De hecho, como nos encontramos en el espacio de nombres </span><b><span style="color: #000000">[Application]</span></b><span style="color: #000000">, si escribiéramos simplemente </span><b><span style="color: #000000">[PDO]</span></b><span style="color: #000000">, este nombre relativo llevaría como prefijo el espacio de nombres actual y daría lugar a la clase </span><b><span style="color: #000000">[Application\PDO]</span></b><span style="color: #000000">, que no existe;</span>
   </li>
   <li><span style="color: #000000">línea 28: en caso de error, SGBD lanzará un \PDOException (línea 37);</span>
   </li>
@@ -2841,7 +2841,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#0000c0">&quot; from </span>{$database-&gt;getTableTranches()}<span style="color:#0000c0">&quot;</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    // ejecución de la orden preparada con los valores de los tramos impositivos</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $statement-&gt;execute();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    // se procesa el resultado</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    // se evalúa el resultado</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $limites = [];</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $coeffR = [];</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $coeffN = [];</span></span>
@@ -2891,7 +2891,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    $statement = $connexion-&gt;prepare($select);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    // se ejecuta la orden preparada</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $statement-&gt;execute();</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    // se procesa el resultado - aquí solo hay una línea</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    // se procesa el resultado: aquí solo hay una línea</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $row = $statement-&gt;fetch(\<span style="color:#005032">PDO</span>::<span style="font-style:italic;color:#0000c0">FETCH_OBJ</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    // se inicializa el atributo [$taxAdminData]</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    $taxAdminData-&gt;setPlafondQfDemiPart($row-&gt;{$database-&gt;getColPlafondQfDemiPart()});</span></span>
@@ -3029,7 +3029,7 @@
 <span id="toc42689961" name="toc42689961" class="odt-bookmark-anchor"></span>
 <span id="refheadingtoc822343439697744" name="refheadingtoc822343439697744" class="odt-bookmark-anchor"></span>
 <span id="lescriptprincipal" name="lescriptprincipal" class="odt-bookmark-anchor"></span></p>
-<h3 id="1345-el-script-principal">13.4.5. <span style="color: #4f81bd">El script principal</span></h3>
+<h3 id="1345-el-script-principal">13.4.5. <span style="color: #4f81bd"><strong>El script principal</strong></span></h3>
 <p><img src="images/10000000000006910000018BC715A4E0.png" width="504" height="118" style="width:13.34cm;height:3.134cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000006910000018BC715A4E0.png" /></p>
 <ul>
   <li><span style="color: #000000">Acabamos de implementar las capas </span><b><span style="color: #000000">[dao] </span></b><span style="color: #000000">(3) y </span><b><span style="color: #000000">[métier] </span></b><span style="color: #000000">(2);</span>

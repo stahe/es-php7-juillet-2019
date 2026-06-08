@@ -1008,9 +1008,9 @@
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// la tabla no está en la sesión - se crea</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// archivo XML para procesar</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$FILE_NAME</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="color:#008000">&quot;data.xml&quot;</span>;</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// se coloca en la sesión</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// procesamiento</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#0000ff">$xml</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span>simplexml_load_file(<span style="color:#0000ff">$FILE_NAME</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">print_r(<span style="color:#0000ff">$xml</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">print_r(<span style="color:#0000ff">$xml</span>-&gt;enseignant-&gt;personne<span style="font-weight:bold">[&#x27;sexe&#x27;]</span>);</span></span>
@@ -1030,7 +1030,7 @@
   </li>
   <li>línea 7: visualización del documento XML;
   </li>
-  <li>línea 8: visualización del valor del atributo «sexo» de una persona docente: <i>&lt;enseignant&gt;&lt;personne sexe=&#x27;…&#x27;&gt;;</i>
+  <li>línea 8: visualización del valor del atributo «sexo» de un profesor: <i>&lt;enseignant&gt;&lt;personne sexe=&#x27;…&#x27;&gt;;</i>
   </li>
   <li>línea 9: visualización del valor de la primera etiqueta <i>&lt;enseignant&gt;&lt;personne&gt;&lt;nom&gt;;</i>
   </li>

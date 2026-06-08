@@ -1326,7 +1326,7 @@
 
 <p><strong>Comentarios</strong></p>
 <ul>
-  <li>líneas 6-20: los atributos que alojarán los atributos del mismo nombre del archivo jSON <b>[taxadmindata.json]</b>. Este es un punto importante: los atributos de la clase <b>[TaxAdminData] </b>son <b>idénticos </b>a los de los archivos jSON y <b>[taxadmindata.json]</b>. Esta particularidad facilita mucho la escritura del código;
+  <li>líneas 6-20: los atributos que alojarán los atributos del mismo nombre del archivo jSON <b>[taxadmindata.json]</b>. Este es un punto importante: los atributos de la clase <b>[TaxAdminData] </b>son <b>idénticos </b>a los del archivo jSON <b>[taxadmindata.json]</b>. Esta particularidad facilita mucho la escritura del código;
   </li>
   <li>la clase <b>[TaxAdminData] </b>no tiene constructor. En PHP, no es posible tener varios constructores. Establecer uno impide, por tanto, inicializar el objeto de otra manera. En lo sucesivo, nuestras clases no tendrán constructor, sino varios métodos de tipo <b>[setFromQqChose] </b>que permitirán inicializarlo de diferentes maneras. La construcción de un objeto de tipo <b>[TaxAdminData] </b>se realiza entonces con la expresión:
   </li>
@@ -1343,7 +1343,7 @@
   </li>
   <li>líneas 48-51: se inicializan los atributos de la clase. Aquí se aprovecha el hecho de que la tabla asociativa <b>[$arrayTaxAdminData] </b>y la clase <b>[TaxAdminData] </b>tienen atributos con los mismos nombres que los valores procedentes del archivo jSON;
   </li>
-  <li>líneas 53-57: se comprueba que se hayan inicializado todos los atributos de la clase <b>[TaxAdminData]</b>;
+  <li>líneas 53-57: se comprueba que todos los atributos de la clase <b>[TaxAdminData] </b>se hayan inicializado;
   </li>
   <li>línea 53: la expresión <b>[get_object_vars($this)] </b>devuelve una tabla asociativa cuyos atributos son los del objeto <b>[$this]</b>, es decir, los atributos de la clase <b>[TaxAdminData]</b>. Aquí hay que entender que la operación de inicialización de las líneas 48-51 pudo haber añadido atributos al objeto <b>[$this]</b>. Así, si escribimos:
   </li>
@@ -1460,7 +1460,7 @@
 <p><strong>Nota</strong>: a veces puede resultar un poco tedioso tener que escribir todos los getter y setter de una clase, sobre todo cuando hay muchos atributos. Netbeans puede generarlos automáticamente, así como el constructor. Para ello, basta con introducir los atributos <strong>[1]</strong>:</p>
 <p><img src="images/10000000000007BA00000243E50398B4.png" width="593" height="174" style="width:15.7cm;height:4.597cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007BA00000243E50398B4.png" /></p>
 <ul>
-  <li>en <b>[2]</b>, haz clic con el botón derecho donde quieras insertar el código y luego elige el option <b>[Insert Code] </b>;
+  <li>en <b>[2]</b>, haz clic con el botón derecho donde quieras insertar el código y luego elige el option <b>[Insert Code]</b>;
   </li>
 </ul>
 
@@ -1539,7 +1539,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// la interfaz sabe procesar datos de archivos de texto</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $usersFilename: archivo de datos de usuario con el estado civil, el número de hijos y el salario anual</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $resultsFilename: archivo de resultados con el estado civil, el número de hijos, el salario anual y el importe del impuesto</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $errorsFilename: archivo de los errores encontrados</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// $errorsFilename: archivo de errores detectados</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// puede lanzar la excepción ExceptionImpots</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> executeBatchImpots(<span style="font-weight:bold;color:#7f0055">string </span>$usersFileName, <span style="font-weight:bold;color:#7f0055">string </span>$resultsFileName, <span style="font-weight:bold;color:#7f0055">string </span>$errorsFileName): <span style="font-weight:bold;color:#7f0055">void</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
@@ -1552,7 +1552,7 @@
   </li>
   <li>línea 6: la interfaz que permite el cálculo de los impuestos;
   </li>
-  <li>línea 10: el método <b>[getTaxAdminData] </b>permitirá obtener los datos de la administración tributaria en un objeto de tipo <b>[TaxAdminData] </b>que acabamos de presentar. Dado que estos datos pueden encontrarse en un archivo, en una base de datos o incluso en la red, el método <b>[getTaxAdminData] </b>puede no conseguir obtener los datos. En ese caso, lanzará una excepción de tipo <b>[ExceptionImpots]</b>. Este es el método estándar en programación orientada a objetos para señalar un error encontrado en un método o un constructor;
+  <li>línea 10: el método <b>[getTaxAdminData] </b>permitirá adquirir los datos de la administración tributaria en un objeto de tipo <b>[TaxAdminData] </b>que acabamos de presentar. Dado que estos datos pueden encontrarse en un archivo, en una base de datos o incluso en la red, el método <b>[getTaxAdminData] </b>puede no conseguir obtener los datos. En ese caso, lanzará una excepción de tipo <b>[ExceptionImpots]</b>. Este es el método estándar en programación orientada a objetos para señalar un error encontrado en un método o un constructor;
   </li>
   <li>línea 13: el método <b>[calculerImpot] </b>permitirá calcular el impuesto de un usuario;
   </li>

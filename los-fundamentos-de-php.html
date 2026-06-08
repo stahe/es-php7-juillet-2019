@@ -1577,7 +1577,7 @@
 </ol></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Un archivo SHOULD declara nuevos símbolos y no provoca otros efectos secundarios, o bien SHOULD ejecuta lógica con efectos secundarios, pero SHOULD NOT hace ambas cosas.</div></td></tr><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><ol>
   <li><b>Declaración de tipos</b>
   </li>
-</ol></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Los nombres de tipo deben declararse en StudlyCaps (el código escrito para 5.2.x y versiones anteriores utiliza la convención de espacio de nombres pseudo de prefijos en los nombres de tipo). Cada tipo se encuentra en un archivo independiente y está en un espacio de nombres de al menos un nivel: un proveedor de nivel superior name.</div><div style="margin:0 0 0.5em 0">Ej.: <i>class EtudiantBoursier {}</i></div></td></tr></table>
+</ol></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><div style="margin:0 0 0.5em 0">Los nombres de tipo deben declararse en StudlyCaps (el código escrito para 5.2.x y versiones anteriores utiliza la convención de pseudonamespacing de prefijos en los nombres de tipo). Cada tipo se encuentra en un archivo independiente y está en un espacio de nombres de al menos un nivel: un proveedor de nivel superior name.</div><div style="margin:0 0 0.5em 0">Ej.: <i>class EtudiantBoursier {}</i></div></td></tr></table>
 
 <p>La recomendación PSR-1 / 4 establece que en un archivo PHP debe encontrarse:</p>
 <ul>
@@ -1638,7 +1638,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">$i<span style="color:#008080"> </span><span style="color:#000000">=</span><span style="color:#008080"> </span><span style="color:#000080">0</span><span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">$j = 0;  // estas dos variables solo son conocidas por una función f</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// a menos que esta las declare explícitamente mediante la instrucción global</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// que quiere utilizarlas</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// que desea utilizarlas</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">f1();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">f2();</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">f3();</span></span>
@@ -2067,7 +2067,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">for</span><span style="color:#008080"> </span>(<span style="color:#0000ff">$i</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="color:#000080">0</span>;<span style="color:#008080"> </span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span>&lt;<span style="color:#008080"> </span>count(<span style="color:#0000ff">$tab1</span>);<span style="color:#008080"> </span><span style="color:#0000ff">$i</span>++)<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span>&quot;tab1<span style="font-weight:bold">[$i]</span>=<span style="color:#0000ff">$tab1</span><span style="font-weight:bold;color:#0000ff">[$i]</span>\n&quot;<span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// añadir al principio de la tabla</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// Añadir al principio de la tabla</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">array_unshift(<span style="color:#0000ff">$tab1</span>,<span style="color:#008080"> </span>-<span style="color:#000080">1</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">// recorrido - 7</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#000000">print</span><span style="color:#008080"> </span>&quot;tab1 a &quot;<span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span><span style="color:#000000">count(</span><span style="color:#0000ff">$tab1</span><span style="color:#000000">)</span><span style="color:#008080"> </span><span style="color:#000000">.</span><span style="color:#008080"> </span>&quot; éléments\n&quot;<span style="color:#000000">;</span></span></span>
@@ -2143,7 +2143,7 @@
 <span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>$tableau=array(&quot;un&quot;,2,&quot;trois&quot;)
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a>$contraires=array(&quot;petit&quot;=&gt;&quot;grand&quot;, &quot;beau&quot;=&gt;&quot;laid&quot;, &quot;cher&quot;=&gt;&quot;bon marché&quot;)
 </code></pre></div></td></tr></table></div>
-<p>La tabla 1 se denomina <strong>tabla</strong> y la tabla 2, <strong>diccionario</strong> o <strong>tabla asociativa,</strong> donde los elementos se anotan <strong>clave =&gt; valor</strong>. La notación <strong><em>$contraires[&quot;beau&quot;]</em></strong> designa el valor asociado a la clave «guapo». En este caso, se trata de la cadena «feo». La tabla 1 no es más que una variante del diccionario y podría escribirse así:</p>
+<p>La tabla 1 se denomina <strong>tabla</strong> y la tabla 2, <strong>diccionario</strong> o <strong>tabla asociativa,</strong> donde los elementos se anotan <strong>clave =&gt; valor</strong>. La notación <strong><em>$contraires[&quot;beau&quot;]</em></strong> designa el valor asociado a la clave «guapo». En este caso, es la cadena «feo». La tabla 1 no es más que una variante del diccionario y podría escribirse así:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a>$tableau=array(0=&gt;&quot;un&quot;,1=&gt;2,2=&gt;&quot;trois&quot;)
 </code></pre></div></td></tr></table></div>
 <p>Así, tenemos <em>$tableau[2] = «tres</em>». En definitiva, solo hay diccionarios. En el caso de una matriz clásica de <em>n</em> elementos, las claves son los números enteros del intervalo <strong>[0,n-1]</strong>.</p>
@@ -2823,7 +2823,7 @@
 <p>Ahora descomentemos la línea 4:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="x">declare(strict_types = 1);</span>
 </code></pre></div>
-<p>Esta instrucción indica que deben respetarse los tipos de los parámetros formales. Si no es así, se señala un error. Los resultados de la ejecución son entonces:</p>
+<p>Esta instrucción indica que deben respetarse los tipos de los parámetros formales. Si no es así, se señala un error. Los resultados de la ejecución pasan a ser entonces:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
@@ -3096,7 +3096,7 @@
   </li>
   <li>línea 26: <i>fopen(nom_fichier,&quot;r&quot;) </i>abre el archivo <i>nom_fichier </i>en modo lectura (<i>r=read</i>). Si la apertura falla (por ejemplo, porque el archivo no existe), <i>fopen </i>devuelve el valor <i>false;</i>
   </li>
-  <li>línea 34: <i>fgets($fic,1000) </i>lee la siguiente línea del archivo con un límite de 1000 caracteres. En la operación <i><b><span style="color: #000000">while </span></b></i><i><span style="color: #000000">(</span></i><i><span style="color: #0000ff">$ligne </span></i><i><span style="color: #000000">= fgets(</span></i><i><span style="color: #0000ff">$fic</span></i><i><span style="color: #000000">,</span></i><i><span style="color: #000080"> 1000</span></i><i><span style="color: #000000">)) {…}</span></i><span style="color: #000000">, hay dos operaciones sucesivas: 1) </span><i><span style="color: #000000">$ligne = fgets(…)</span></i><span style="color: #000000"> 2) </span><i><span style="color: #000000">while ( ! $ligne)</span></i><span style="color: #000000">. Una vez leído el último carácter del archivo, la función </span><i><span style="color: #000000">fgets </span></i><span style="color: #000000">devuelve el valor </span><i><span style="color: #000000">false </span></i><span style="color: #000000">y el bucle </span><i><span style="color: #000000">while </span></i><span style="color: #000000">se detiene. La función </span><i><span style="color: #000000">fgets </span></i><span style="color: #000000">intenta aquí leer un máximo de 1000 caracteres, pero se detiene en cuanto encuentra un carácter de fin de línea. Dado que todas las líneas tienen menos de 1000 caracteres, </span><b><span style="color: #000000">[fgets] </span></b><span style="color: #000000">lee una línea de texto, incluido el carácter de fin de línea. La función </span><i><span style="color: #000000">cutNewLineChar </span></i><span style="color: #000000">de las líneas 75-84 elimina los posibles caracteres de fin de línea;</span>
+  <li>línea 34: <i>fgets($fic,1000) </i>lee la siguiente línea del archivo con un límite de 1000 caracteres. En la operación <i><b><span style="color: #000000">while </span></b></i><i><span style="color: #000000">(</span></i><i><span style="color: #0000ff">$ligne </span></i><i><span style="color: #000000">= fgets(</span></i><i><span style="color: #0000ff">$fic</span></i><i><span style="color: #000000">,</span></i><i><span style="color: #000080"> 1000</span></i><i><span style="color: #000000">)) {…}</span></i><span style="color: #000000">, hay dos operaciones sucesivas: 1) </span><i><span style="color: #000000">$ligne=fgets(…)</span></i><span style="color: #000000"> 2) </span><i><span style="color: #000000">while ( ! $ligne)</span></i><span style="color: #000000">. Una vez leído el último carácter del archivo, la función </span><i><span style="color: #000000">fgets </span></i><span style="color: #000000">devuelve el valor </span><i><span style="color: #000000">false </span></i><span style="color: #000000">y el bucle </span><i><span style="color: #000000">while </span></i><span style="color: #000000">se detiene. La función </span><i><span style="color: #000000">fgets </span></i><span style="color: #000000">intenta aquí leer un máximo de 1000 caracteres, pero se detiene en cuanto encuentra un carácter de fin de línea. Dado que todas las líneas tienen menos de 1000 caracteres, </span><b><span style="color: #000000">[fgets] </span></b><span style="color: #000000">lee una línea de texto, incluido el carácter de fin de línea. La función </span><i><span style="color: #000000">cutNewLineChar </span></i><span style="color: #000000">de las líneas 75-84 elimina los posibles caracteres de fin de línea;</span>
   </li>
   <li><span style="color: #000000">línea 77: la función </span><i><span style="color: #000000">strlen($chaîne) </span></i><span style="color: #000000">devuelve el número de caracteres de $chaîne;</span>
   </li>
@@ -3252,7 +3252,7 @@
 <ul>
   <li>las matrices no asociativas están entre corchetes [];
   </li>
-  <li>las tablas asociativas se escriben entre llaves {};
+  <li>las matrices asociativas se escriben entre llaves {};
   </li>
 </ul>
 
@@ -3390,7 +3390,7 @@
 <ul>
   <li>líneas 1-38: el objeto resultante de la decodificación del archivo jSON <b>[famille.json]</b>;
   </li>
-  <li>líneas 39-76: la tabla asociativa resultante de la decodificación del archivo jSON <b>[famille.json]</b>;
+  <li>líneas 39-76: la matriz asociativa resultante de la decodificación del archivo jSON <b>[famille.json]</b>;
   </li>
 </ul>
 

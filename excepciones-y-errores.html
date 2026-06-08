@@ -615,10 +615,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#79-crear-clases-de-excepciones-propias" class="md-nav__link">
+  <a href="#79-crear-tus-propias-clases-de-excepciones" class="md-nav__link">
     <span class="md-ellipsis">
       
-        7.9. Crear clases de excepciones propias
+        7.9. Crear tus propias clases de excepciones
       
     </span>
   </a>
@@ -1179,7 +1179,7 @@
 <span id="toc42690269" name="toc42690269" class="odt-bookmark-anchor"></span>
 <span id="toc42689883" name="toc42689883" class="odt-bookmark-anchor"></span></p>
 <h2 id="75-ejemplo-1">7.5. <span style="color: #4f81bd">Ejemplo 1</span></h2>
-<p>El primer ejemplo, <strong>[exceptions-01.php],</strong> muestra tanto errores PHP como una excepción:</p>
+<p>El primer ejemplo <strong>[exceptions-01.php]</strong> muestra tanto errores PHP como una excepción:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
@@ -1288,7 +1288,7 @@
 
 <p><strong><span style="color: #000000">Comentarios</span></strong></p>
 <ul>
-  <li><span style="color: #000000">el script es el que se ha presentado en el párrafo anterior. Solo que ahora se ha rodeado el código de las líneas 8-19, susceptible de provocar errores, con una estructura </span><b><span style="color: #000000">try / catch</span></b><span style="color: #000000">: si el código de las líneas 8-21 provoca (lanza) una excepción o un error, este será gestionado por la cláusula </span><b><span style="color: #000000">catch </span></b><span style="color: #000000">de las líneas 22-26;</span>
+  <li><span style="color: #000000">el script es el que se presentó en el párrafo anterior. Solo que ahora se ha rodeado el código de las líneas 8-19, susceptible de provocar errores, con una estructura </span><b><span style="color: #000000">try / catch</span></b><span style="color: #000000">: si el código de las líneas 8-21 provoca (lanza) una excepción o un error, este será gestionado por la cláusula </span><b><span style="color: #000000">catch </span></b><span style="color: #000000">de las líneas 22-26;</span>
   </li>
   <li><span style="color: #000000">línea 22: el parámetro de la cláusula </span><b><span style="color: #000000">[catch] </span></b><span style="color: #000000">es el tipo de excepción o error que se desea gestionar. Al establecer como tipo </span><b><span style="color: #000000">[\Throwable]</span></b><span style="color: #000000">, que es una interfaz, se indica que se desea gestionar cualquier instancia de clase que implemente la interfaz </span><b><span style="color: #000000">[\Throwable]</span></b><span style="color: #000000">. Dado que todas las clases de errores y excepciones implementan esta interfaz, la cláusula </span><b><span style="color: #000000">[catch] </span></b><span style="color: #000000">gestiona aquí cualquier error o excepción encapsulado en una clase;</span>
   </li>
@@ -1381,7 +1381,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// división por 0</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span>intdiv(<span style="color:#000080">5</span>,<span style="color:#008080"> </span><span style="color:#000080">0</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}<span style="color:#008080"> </span>catch<span style="color:#008080"> </span>(\Exception<span style="color:#008080"> </span><span style="color:#0000ff">$ex</span>)<span style="color:#008080"> </span>{</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// visualización del mensaje de error</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// visualización de mensaje de error</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;Erreur 6 : &quot;</span><span style="color:#008080"> </span>.<span style="color:#008080"> </span><span style="color:#0000ff">$ex</span>-&gt;getMessage()<span style="color:#008080"> </span>.<span style="color:#008080"> </span><span style="color:#008000">&quot;\n&quot;</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">}</span></span>
 </code></pre></div>
@@ -1406,7 +1406,7 @@
       </li>
       <li><span style="color: #000000">línea 51: se intercepta el tipo </span><b><span style="color: #000000">[\Error]</span></b><span style="color: #000000">. Es válido, ya que la clase </span><b><span style="color: #000000">[DivisionByzeroError] </span></b><span style="color: #000000">extiende la clase </span><b><span style="color: #000000">[Error]</span></b><span style="color: #000000">;</span>
       </li>
-      <li><span style="color: #000000">línea 59: se intercepta el tipo </span><b><span style="color: #000000">[\Exception]</span></b><span style="color: #000000">. Esto no es válido, ya que la clase </span><b><span style="color: #000000">[DivisionByzeroError] </span></b><span style="color: #000000">no tiene ninguna relación con la clase </span><b><span style="color: #000000">[\Exception]</span></b><span style="color: #000000">;</span>
+      <li><span style="color: #000000">línea 59: se intercepta el tipo </span><b><span style="color: #000000">[\Exception]</span></b><span style="color: #000000">. Esto no es válido porque la clase </span><b><span style="color: #000000">[DivisionByzeroError] </span></b><span style="color: #000000">no tiene ninguna relación con la clase </span><b><span style="color: #000000">[\Exception]</span></b><span style="color: #000000">;</span>
       </li>
     </ul>
   </li>
@@ -1450,11 +1450,11 @@
   </li>
 </ul>
 
-<p>Finalmente, el código de la cláusula <strong>[finally]</strong> se ejecuta en todo momento. Este escenario resulta útil en el siguiente caso:</p>
+<p>Por último, el código de la cláusula <strong>[finally]</strong> se ejecuta en todo momento. Este escenario resulta útil en el siguiente caso:</p>
 <ul>
   <li>en <b>[try]</b>, el código ha obtenido recursos (archivos, bases de datos, conexiones de red, colas). Por lo general, estos recursos consumen mucha memoria. Por lo tanto, hay que devolverlos (lo que se suele denominar <b>«cerrar»</b>) tan pronto como sea posible;
   </li>
-  <li>si la adquisición de los recursos se ha realizado en <b>[try]</b>, su devolución se incluirá en <b>[finally]</b>. Esto nos garantiza que, en todos los casos (haya error o no), los recursos adquiridos se devuelvan al sistema;
+  <li>si la adquisición de los recursos se ha realizado en <b>[try]</b>, su liberación se incluirá en <b>[finally]</b>. Esto nos garantiza que, en todos los casos (haya error o no), los recursos adquiridos se devuelvan al sistema;
   </li>
 </ul>
 
@@ -1555,7 +1555,7 @@
 <span id="toc42690659" name="toc42690659" class="odt-bookmark-anchor"></span>
 <span id="toc42690273" name="toc42690273" class="odt-bookmark-anchor"></span>
 <span id="toc42689887" name="toc42689887" class="odt-bookmark-anchor"></span></p>
-<h2 id="79-crear-clases-de-excepciones-propias">7.9. <span style="color: #4f81bd">Crear clases de excepciones propias</span></h2>
+<h2 id="79-crear-tus-propias-clases-de-excepciones">7.9. <span style="color: #4f81bd">Crear tus propias clases de excepciones</span></h2>
 <p>En un proyecto de cierta envergadura, resulta útil diferenciar los distintos errores encapsulándolos en diferentes clases de excepciones. En el script anterior, hemos visto que cualquier excepción podía ser interceptada por una cláusula <strong>[catch (\Throwable]</strong>. Esto se recomienda si no se tiene ni idea del error interceptado y el tratamiento es el mismo para todos los errores. A veces es así, pero a menudo es necesario adaptar el tratamiento al tipo exacto de error. Por lo tanto, hay que diferenciar los errores entre sí.</p>
 <p>Examinemos el siguiente script <strong>[exceptions-06.php]</strong>:</p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
@@ -1850,7 +1850,7 @@
 <a id="__codelineno-7-29" name="__codelineno-7-29"></a><span class="c1">// o utilizamos nuestras excepciones</span>
 <a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="nv">$e1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Exception1</span><span class="p">(</span><span class="s2">&quot;Erreur 1…&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Exception2</span><span class="p">(</span><span class="s2">&quot;Erreur 2…&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="k">new</span> <span class="nx">Exception3</span><span class="p">(</span><span class="s2">&quot;Erreur 3…&quot;</span><span class="p">)));</span>
 <a id="__codelineno-7-31" name="__codelineno-7-31"></a><span class="nb">var_dump</span><span class="p">(</span><span class="nv">$e1</span><span class="p">);</span>
-<a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="c1">// aprovechamiento de la excepción actual</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="c1">// explotación de la excepción actual</span>
 <a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="k">print</span> <span class="nv">$e1</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">()</span> <span class="o">.</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">;</span>
 <a id="__codelineno-7-34" name="__codelineno-7-34"></a><span class="nv">$e</span> <span class="o">=</span> <span class="nv">$e1</span><span class="p">;</span>
 <a id="__codelineno-7-35" name="__codelineno-7-35"></a><span class="k">while</span> <span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getPrevious</span><span class="p">()</span> <span class="o">!==</span> <span class="k">NULL</span><span class="p">)</span> <span class="p">{</span>

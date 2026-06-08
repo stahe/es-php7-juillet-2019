@@ -1255,7 +1255,7 @@
 <span id="toc42690686" name="toc42690686" class="odt-bookmark-anchor"></span>
 <span id="toc42690300" name="toc42690300" class="odt-bookmark-anchor"></span>
 <span id="toc42689914" name="toc42689914" class="odt-bookmark-anchor"></span></p>
-<h2 id="111-estructura-de-los-scripts">11.1. <span style="color: #4f81bd"><strong>Estructura de los scripts</strong></span></h2>
+<h2 id="111-estructura-de-los-scripts">11.1. <span style="color: #4f81bd">Estructura de los scripts</span></h2>
 <p><img src="images/1000000000000244000001DF217D51D2.png" width="203" height="168" style="width:5.369cm;height:4.434cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000244000001DF217D51D2.png" /></p>
 <p><span id="toc42690687" name="toc42690687" class="odt-bookmark-anchor"></span>
 <span id="toc42690301" name="toc42690301" class="odt-bookmark-anchor"></span>
@@ -1476,7 +1476,7 @@
       </li>
     </ul>
   </li>
-  <li><span style="color: #000000">línea 12: el método que permite obtener los datos de la administración tributaria. Aquí no se le pasa ningún parámetro, ya que no se sabe cómo están almacenados;</span>
+  <li><span style="color: #000000">línea 12: el método que permite obtener los datos de la administración tributaria. Aquí no se le pasa ningún parámetro porque no se sabe cómo están almacenados;</span>
   </li>
   <li><span style="color: #000000">línea 15: el método que permite guardar los resultados del cálculo del impuesto en un archivo de texto cuyo nombre se pasa como parámetro;</span>
   </li>
@@ -1595,7 +1595,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    $this-&gt;saveString($resultsFilename, <span style="font-style:italic">implode</span>(<span style="color:#0000c0">&quot;\n&quot;</span>, $taxPayersData));</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  }</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// registro de los resultados de una tabla en un archivo de texto</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#000000">// grabación de los resultados de una tabla en un archivo de texto</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008040">private </span><span style="color:#7f0055">function</span> saveString(<span style="color:#7f0055">string </span>$fileName, <span style="color:#7f0055">string </span>$data): <span style="color:#7f0055">void </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// guardar la tabla [$data] en el archivo de texto [$fileName]</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#000000">// si el archivo de texto [$fileName] no existe, se crea</span></span></span>
@@ -1624,7 +1624,7 @@
       </li>
     </ul>
   </li>
-  <li><span style="color: #000000">línea 73: cabe destacar el procesamiento realizado al salir del bucle de las líneas 26-71. De hecho, la función </span><b><span style="color: #000000">[fgets] </span></b><span style="color: #000000">tiene el inconveniente de establecer el valor booleano FALSE tanto cuando la lectura </span><span style="color: #000000">de las líneas ha encontrado la marca de fin de archivo como si dicha lectura no ha podido completarse debido a un error. Para diferenciar ambos casos, se comprueba si se ha llegado al final del archivo con la función </span><b><span style="color: #000000">[feof]</span></b><span style="color: #000000">. Si no se ha llegado al final del archivo, significa que se ha producido un error y, por lo tanto, se lanza una excepción;</span>
+  <li><span style="color: #000000">línea 73: cabe destacar el procesamiento realizado al salir del bucle de las líneas 26-71. De hecho, la función </span><b><span style="color: #000000">[fgets] </span></b><span style="color: #000000">tiene el inconveniente de establecer el valor booleano FALSE tanto cuando la lectura de las líneas ha encontrado la marca de fin de archivo como si dicha lectura no ha podido completarse debido a un error. Para diferenciar ambos casos, se comprueba si se ha llegado al final del archivo con la función </span><b><span style="color: #000000">[feof]</span></b><span style="color: #000000">. Si no se ha llegado al final del archivo, significa que se ha producido un error y, por lo tanto, se lanza una excepción;</span>
   </li>
   <li><span style="color: #000000">líneas 83-88: se ejecuta </span><b><span style="color: #000000">[finally] </span></b><span style="color: #000000">independientemente de si se ha producido una excepción durante el procesamiento del archivo;</span>
   </li>
@@ -1879,7 +1879,7 @@
   </li>
 </ul>
 
-<p><span style="color: #000000">Se concluye que, cuando se ejecutan los métodos </span><strong><span style="color: #000000">[calculerImpots] </span></strong><span style="color: #000000">y </span><strong><span style="color: #000000">[executeBatchImpots]</span></strong><span style="color: #000000">, se inicializan los dos atributos </span><strong><span style="color: #000000">[$dao] </span></strong><span style="color: #000000">y </span><strong><span style="color: #000000">[$taxAdminData]</span></strong><span style="color: #000000">.</span></p>
+<p><span style="color: #000000">Se deduce que, cuando se ejecutan los métodos </span><strong><span style="color: #000000">[calculerImpots] </span></strong><span style="color: #000000">y </span><strong><span style="color: #000000">[executeBatchImpots]</span></strong><span style="color: #000000">, se inicializan los dos atributos </span><strong><span style="color: #000000">[$dao] </span></strong><span style="color: #000000">y </span><strong><span style="color: #000000">[$taxAdminData]</span></strong><span style="color: #000000">.</span></p>
 <p><span style="color: #000000">El método </span><strong><span style="color: #000000">[calculerImpots] </span></strong><span style="color: #000000">es el siguiente:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-bash">
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#008040">public </span><span style="font-weight:bold;color:#7f0055">function</span> calculerImpot(<span style="font-weight:bold;color:#7f0055">string </span>$marié, <span style="font-weight:bold;color:#7f0055">int </span>$enfants, <span style="font-weight:bold;color:#7f0055">int </span>$salaire): <span style="font-weight:bold;color:#7f0055">array </span>{</span></span>
@@ -1974,7 +1974,7 @@
 <ul>
   <li><span style="color: #000000">línea 1: el método debe llamar repetidamente al método </span><b><span style="color: #000000">[calculerImpot] </span></b><span style="color: #000000">para cada uno de los contribuyentes encontrados en el archivo de texto denominado </span><b><span style="color: #000000">[$taxPayersFileName]</span></b><span style="color: #000000">. Debe guardar los resultados en el archivo de texto denominado </span><b><span style="color: #000000">[$resultsFileName]</span></b><span style="color: #000000">. Los errores no fatales que se produzcan se registran en el archivo de texto denominado </span><b><span style="color: #000000">[$errorsFileName]</span></b><span style="color: #000000">. El método no lanza excepciones por sí mismo, sino que deja que se propaguen las que lanza la capa </span><b><span style="color: #000000">[dao]</span></b><span style="color: #000000">;</span>
   </li>
-  <li><span style="color: #000000">línea 4: se solicitan los datos de los contribuyentes a la capa </span><b><span style="color: #000000">[dao]</span></b><span style="color: #000000">. Esta devuelve una matriz de elementos de tipo </span><b><span style="color: #000000">[TaxPayerData], </span></b><span style="color: #000000">que es una clase de atributos </span><b><span style="color: #000000">[marié, nbEnfants, salaire, montant, décôte, réduction, surcôte, taux] </span></b><span style="color: #000000">(véase el apartado </span><a href="#objetsechangesentre"><u><span style="color: #0563c1">enlace</span></u></a><span style="color: #000000">). Si se produce una excepción aquí, como no es interceptada por un </span><i><span style="color: #000000">catch</span></i><span style="color: #000000">, se propagará automáticamente al código llamante. Esto significa que, en caso de excepción, la línea 6 no se ejecuta;</span>
+  <li><span style="color: #000000">línea 4: se solicitan los datos de los contribuyentes a la capa </span><b><span style="color: #000000">[dao]</span></b><span style="color: #000000">. Esta devuelve una matriz de elementos de tipo </span><b><span style="color: #000000">[TaxPayerData], </span></b><span style="color: #000000">que es una clase de atributos </span><b><span style="color: #000000">[marié, nbEnfants, salaire, montant, décôte, réduction, surcôte, taux] </span></b><span style="color: #000000">(véase el párrafo </span><a href="#objetsechangesentre"><u><span style="color: #0563c1">del enlace</span></u></a><span style="color: #000000">). Si se produce una excepción aquí, como no es interceptada por un </span><i><span style="color: #000000">catch</span></i><span style="color: #000000">, se propagará automáticamente al código llamante. Esto significa que, en caso de excepción, la línea 6 no se ejecuta;</span>
   </li>
   <li><span style="color: #000000">línea 6: la matriz de resultados de tipo </span><b><span style="color: #000000">[TaxPayerData]</span></b><span style="color: #000000">;</span>
   </li>
@@ -2197,7 +2197,7 @@
 
 <p><img src="images/100000000000045F000003F59033C0CE.png" width="336" height="304" style="width:8.879cm;height:8.04cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000045F000003F59033C0CE.png" /></p>
 <ul>
-  <li><span style="color: #000000">En </span><b><span style="color: #000000">[9]</span></b><span style="color: #000000">, se ha creado una carpeta </span><b><span style="color: #000000">[tests]</span></b><span style="color: #000000">, así como un archivo de configuración </span><b><span style="color: #000000">[codeception.yml] </span></b><span style="color: #000000">en </span><b><span style="color: #000000">[10-11]</span></b><span style="color: #000000">. El archivo </span><b><span style="color: #000000">[11] </span></b><span style="color: #000000">es el mismo que el archivo </span><b><span style="color: #000000">[10]</span></b><span style="color: #000000">. Codeception simplemente ha creado una carpeta </span><b><span style="color: #000000">[Important Files] </span></b><span style="color: #000000">para dar un significado concreto al archivo </span><b><span style="color: #000000">[10]</span></b><span style="color: #000000">;</span>
+  <li><span style="color: #000000">En </span><b><span style="color: #000000">[9]</span></b><span style="color: #000000">, se ha creado una carpeta </span><b><span style="color: #000000">[tests]</span></b><span style="color: #000000">, así como un archivo de configuración </span><b><span style="color: #000000">[codeception.yml] </span></b><span style="color: #000000">en </span><b><span style="color: #000000">[10-11]</span></b><span style="color: #000000">. El archivo </span><b><span style="color: #000000">[11] </span></b><span style="color: #000000">es el mismo que el archivo </span><b><span style="color: #000000">[10]</span></b><span style="color: #000000">. Codeception simplemente ha creado una carpeta </span><b><span style="color: #000000">[Important Files] </span></b><span style="color: #000000">para dar un significado especial al archivo </span><b><span style="color: #000000">[10]</span></b><span style="color: #000000">;</span>
   </li>
   <li><span style="color: #000000">en </span><b><span style="color: #000000">[12-13]</span></b><span style="color: #000000">, volvemos a las propiedades del proyecto;</span>
   </li>
@@ -2227,7 +2227,7 @@
   </li>
 </ul>
 
-<p><span style="color: #000000">Nuestras clases de prueba </span><strong><span style="color: #000000">[Codeception] </span></strong><span style="color: #000000">tendrán la siguiente forma </span><strong><span style="color: #000000">[https://codeception.com/docs/05-UnitTests]</span></strong><span style="color: #000000">:</span></p>
+<p><span style="color: #000000">Nuestras clases de prueba </span><strong><span style="color: #000000">[Codeception] </span></strong><span style="color: #000000">tendrán el siguiente formato </span><strong><span style="color: #000000">[https://codeception.com/docs/05-UnitTests]</span></strong><span style="color: #000000">:</span></p>
 <div class="odt-code-rich" data-linenums="true" style="counter-reset: odtline 0;"><pre><code class="language-php">
 <span class="odt-code-line"><span class="odt-code-line-content">&lt;?php</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"></span></span>
@@ -2400,7 +2400,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// constantes</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#000000">define</span><span style="color:#000000">(</span><span style="font-style:italic">&quot;ROOT&quot;</span><span style="color:#000000">, </span>&quot;C:/Data/st-2019/dev/php7/poly/scripts-console/impots/version-04&quot;<span style="color:#000000">);</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-style:italic;color:#000000">define</span><span style="color:#000000">(</span><span style="font-style:italic">&quot;VENDOR&quot;</span><span style="color:#000000">, </span>&quot;C:/myprograms/laragon-lite/www/vendor&quot;<span style="color:#000000">);</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">// inclusión de interfaces y clases</span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">// Inclusión de interfaces y clases</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">require_once </span><span style="font-style:italic">ROOT</span><span style="color:#000000"> . </span>&quot;/TaxAdminData.php&quot;<span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">require_once </span><span style="font-style:italic">ROOT</span><span style="color:#000000"> . </span>&quot;/TaxPayerData.php&quot;<span style="color:#000000">;</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold;color:#7f0055">require_once </span><span style="font-style:italic">ROOT</span><span style="color:#000000"> . </span>&quot;/ExceptionImpots.php&quot;<span style="color:#000000">;</span></span></span>

@@ -1140,7 +1140,7 @@
 <ul>
   <li>una vez iniciado, Laragon <b>[1] </b>se puede administrar desde un menú <b>[2]</b>;
   </li>
-  <li>en <b>[3-5]</b>, se instala la herramienta de administración de MySQL si aún no se ha instalado;
+  <li>en <b>[3-5]</b>, se instala la herramienta de administración de [phpMyAdmin] si aún no se ha instalado;
   </li>
 </ul>
 
@@ -1376,7 +1376,7 @@
   </li>
   <li>línea 20: si se produce un <b>[PDOException]</b>, se muestra el mensaje de error asociado;
   </li>
-  <li>líneas 21-24: se pasa a la cláusula <b>[finally] </b>en todos los casos, haya excepción o no, para cerrar la conexión con la base de datos (línea 23);
+  <li>líneas 21-24: se pasa a la cláusula <b>[finally] </b>en todos los casos, haya o no excepción, para cerrar la conexión con la base de datos (línea 23);
   </li>
 </ul>
 
@@ -1427,7 +1427,7 @@
 <span id="toc42690709" name="toc42690709" class="odt-bookmark-anchor"></span>
 <span id="toc42690323" name="toc42690323" class="odt-bookmark-anchor"></span>
 <span id="toc42689937" name="toc42689937" class="odt-bookmark-anchor"></span></p>
-<h2 id="124-rellenar-una-tabla">12.4. <span style="color: #4f81bd"><strong>Rellenar una tabla</strong></span></h2>
+<h2 id="124-rellenar-una-tabla">12.4. <span style="color: #4f81bd">Rellenar una tabla</span></h2>
 <p>Vamos a escribir un script PHP que ejecute las órdenes SQL que se encuentran en el siguiente archivo de texto <strong>[creation.txt]</strong>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
@@ -1536,7 +1536,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// se recupera el texto de la consulta</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// trim eliminará el carácter de fin de línea</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="color:#0000ff">$requête</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span>trim(<span style="color:#0000ff">$requêtes</span><span style="font-weight:bold">[$i]</span>);</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// ¿Consulta vacía?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">    <span style="color:#008080">// ¿consulta vacía?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">if</span><span style="color:#008080"> </span>(strlen(<span style="color:#0000ff">$requête</span>)<span style="color:#008080"> </span>==<span style="color:#008080"> </span><span style="color:#000080">0</span>)<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#008080">// se ignora la consulta y se pasa a la siguiente</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="color:#0000ff">$i</span>++;</span></span>
@@ -1550,7 +1550,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">        </span><span style="font-weight:bold">print</span><span style="color:#008080"> </span><span style="color:#008000">&quot;</span><span style="color:#0000ff">$requête</span><span style="color:#008000"> : Exécution réussie\n&quot;</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span>}</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span>}<span style="color:#008080"> </span><span style="font-weight:bold">catch</span><span style="color:#008080"> </span>(PDOException<span style="color:#008080"> </span><span style="color:#0000ff">$ex</span>)<span style="color:#008080"> </span>{</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#008080">// se ha producido un error</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#008080">// Se ha producido un error</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span>addError(<span style="color:#0000ff">$erreurs</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$requête</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$ex</span>-&gt;getMessage(),<span style="color:#008080"> </span><span style="color:#0000ff">$suivi</span>);</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#008080">// ¿Se detiene?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">      </span><span style="color:#0000ff">$fini</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="color:#0000ff">$arrêt</span>;</span></span>
@@ -1729,7 +1729,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// ---------------------------------------------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">function</span><span style="color:#008080"> </span>exécuterCommandes(PDO<span style="color:#008080"> </span><span style="color:#0000ff">$connexion</span>,<span style="color:#008080"> </span><span style="font-weight:bold">string</span><span style="color:#008080"> </span><span style="color:#0000ff">$SQLFileName</span>,<span style="color:#008080"> </span><span style="font-weight:bold">bool</span><span style="color:#008080"> </span><span style="color:#0000ff">$suivi</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="font-weight:bold">FALSE</span>,<span style="color:#008080"> </span><span style="font-weight:bold">bool</span><span style="color:#008080"> </span><span style="color:#0000ff">$arrêt</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="font-weight:bold">TRUE</span>):<span style="color:#008080"> </span><span style="font-weight:bold">array</span><span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">………………………………………………………….</span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// ejecución de las consultas una por una - inicialmente sin errores</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// ejecutamos las consultas una por una; al principio no hay errores</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$erreurs</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span>[];</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$i</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="color:#000080">0</span>;</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="color:#0000ff">$fini</span><span style="color:#008080"> </span>=<span style="color:#008080"> </span><span style="font-weight:bold">FALSE</span>;</span></span>
@@ -1782,7 +1782,7 @@
 <span class="odt-code-line"><span class="odt-code-line-content">// ---------------------------------------------------------------------------------</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="font-weight:bold">function</span><span style="color:#008080"> </span>afficherInfos(<span style="font-weight:bold">string</span><span style="color:#008080"> </span><span style="color:#0000ff">$commande</span>,<span style="color:#008080"> </span><span style="color:#0000ff">$résultat</span>):<span style="color:#008080"> </span>void<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// muestra el resultado $résultat de una consulta sql</span></span></span>
-<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// ¿Se trataba de una consulta SELECT?</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">  <span style="color:#008080">// ¿Se trataba de un select?</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">  </span><span style="font-weight:bold">switch</span><span style="color:#008080"> </span>(<span style="color:#0000ff">$commande</span>)<span style="color:#008080"> </span>{</span></span>
 <span class="odt-code-line"><span class="odt-code-line-content"><span style="color:#008080">    </span><span style="font-weight:bold">case</span><span style="color:#008080"> </span><span style="color:#008000">&quot;select&quot;</span><span style="color:#008080"> :</span></span></span>
 <span class="odt-code-line"><span class="odt-code-line-content">      <span style="color:#008080">// se muestran los nombres de los campos</span></span></span>
@@ -1843,7 +1843,7 @@
   </li>
   <li>líneas 105-110: se construye una línea de separación con la misma longitud que la cadena de caracteres construida anteriormente;
   </li>
-  <li>líneas 112-121: un objeto de tipo <i>PDOStatement </i>se puede recorrer mediante un bucle <i>«foreach</i>». En cada iteración, el elemento obtenido es una fila de la tabla de resultados de <i>la consulta «SELECT», </i>en forma de matriz de valores que representan los valores de las distintas columnas de la fila. Se muestran todos estos valores con un bucle <i>for </i>(líneas 114-116);
+  <li>Líneas 112-121: un objeto de tipo <i>PDOStatement </i>se puede recorrer mediante un bucle <i>«foreach</i>». En cada iteración, el elemento obtenido es una fila de la tabla de resultados de <i>la consulta «SELECT», </i>en forma de matriz de valores que representan los valores de las diferentes columnas de la fila. Se muestran todos estos valores con un bucle <i>for </i>(líneas 114-116);
   </li>
   <li>líneas 123-127: el resultado de la ejecución de una orden <i>insert</i>, <i>update </i>o <i>delete </i>es el número de líneas modificadas por la orden;
   </li>
@@ -1946,7 +1946,7 @@
 </code></pre></div>
 
 <p><strong>Comentarios</strong></p>
-<p>Nos interesan aquí las líneas 16-24, que insertan dos personas en la tabla de personas de la base de datos <strong>[dbpersonnes]</strong>.</p>
+<p>Nos interesan aquí las líneas 16-24, que insertan dos personas en la tabla de personas de la base <strong>[dbpersonnes]</strong>.</p>
 <ul>
   <li>Línea 21: se «prepara» una orden SQL configurada. Los parámetros van precedidos del carácter : :<b>apellido</b>, :<b>nombre</b>, :<b>edad</b>. Para «preparar» una orden SQL, se utiliza el método <b>[PDO::prepare]</b>. El resultado es un tipo <b>[PDOStatement]</b>. La «preparación» no es una ejecución: no se ejecuta nada;
   </li>
@@ -1956,18 +1956,11 @@
 
 <div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">$statement→bindValue(“nom”<span style="color:#000000">,”Langevin”);</span></span></span>
-</code></pre></div>
-
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">$statement→bindValue(“prenom”<span style="color:#000000">,”Paul”);</span></span></span>
-</code></pre></div>
-
-<div class="odt-code-rich" data-linenums="false" style="counter-reset: odtline 0;"><pre><code class="language-text">
 <span class="odt-code-line"><span class="odt-code-line-content">$statement→bindValue(“age”<span style="color:#000000">,47);</span></span></span>
+<span class="odt-code-line"><span class="odt-code-line-content">$statement→execute();</span></span>
 </code></pre></div>
 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$statement→execute();
-</code></pre></div>
 <p>El inconveniente es que hay que repetir esta instrucción para cada parámetro. El método del diccionario puede resultar entonces más práctico. El método <strong>[PDOStatement::execute]</strong> devuelve FALSE si la ejecución falla;</p>
 <ul>
   <li>el método utilizado aquí para realizar las inserciones:
@@ -2093,6 +2086,27 @@
   </li>
 </ul>
 
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>array(3) {
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>  [&quot;nom&quot;]=&gt;
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>  string(4) &quot;nom1&quot;
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a>  [&quot;prenom&quot;]=&gt;
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a>  string(7) &quot;prenom1&quot;
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>  [&quot;age&quot;]=&gt;
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a>  string(2) &quot;10&quot;
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>}
+</code></pre></div></td></tr></table></div>
+<ul>
+  <li>líneas 31-32: el parámetro <b>[PDO::FETCH_OBJ] </b>hace que la línea devuelta sea un objeto de tipo <b>[stdclass] </b>cuyos atributos son los nombres de las columnas de la tabla:
+  </li>
+</ul>
+
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
 <span class="normal"><a href="#__codelineno-5-3">3</a></span>
@@ -2100,17 +2114,19 @@
 <span class="normal"><a href="#__codelineno-5-5">5</a></span>
 <span class="normal"><a href="#__codelineno-5-6">6</a></span>
 <span class="normal"><a href="#__codelineno-5-7">7</a></span>
-<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>array(3) {
+<span class="normal"><a href="#__codelineno-5-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>object(stdClass)#2 (3) {
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>  [&quot;nom&quot;]=&gt;
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a>  string(4) &quot;nom1&quot;
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>  string(4) &quot;nom2&quot;
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>  [&quot;prenom&quot;]=&gt;
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>  string(7) &quot;prenom1&quot;
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>  string(7) &quot;prenom2&quot;
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a>  [&quot;age&quot;]=&gt;
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a>  string(2) &quot;10&quot;
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>  string(2) &quot;20&quot;
 <a id="__codelineno-5-8" name="__codelineno-5-8"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
-  <li>líneas 31-32: el parámetro <b>[PDO::FETCH_OBJ] </b>hace que la línea devuelta sea un objeto de tipo <b>[stdclass] </b>cuyos atributos son los nombres de las columnas de la tabla:
+  <li>línea 34: se establece el modo de búsqueda del método <b>[fetch] </b>con el método <b>[PDOStatement::setFetchMode]</b>. Este modo se convierte entonces en el modo por defecto mientras no se modifique, ya sea mediante otra operación <b>[PDOStatement::setFetchMode] </b>o pasando un modo como parámetro al método <b>[PDOStatement::fetch], </b>tal y como se ha hecho anteriormente. La operación <b>[setFetchMode(PDO::FETCH_CLASS, &quot;Person&quot;)] </b>indica que la línea leída debe colocarse en un objeto de tipo <b>[Person]</b>. Esta clase debe tener, entre sus atributos, algunos que lleven el nombre de las columnas de la línea leída. Este es el caso de la clase <b>[Person] </b>definida en las líneas 56-63;
+  </li>
+  <li>la línea 36 muestra el siguiente resultado:
   </li>
 </ul>
 
@@ -2121,37 +2137,14 @@
 <span class="normal"><a href="#__codelineno-6-5">5</a></span>
 <span class="normal"><a href="#__codelineno-6-6">6</a></span>
 <span class="normal"><a href="#__codelineno-6-7">7</a></span>
-<span class="normal"><a href="#__codelineno-6-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>object(stdClass)#2 (3) {
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a>  [&quot;nom&quot;]=&gt;
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a>  string(4) &quot;nom2&quot;
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a>  [&quot;prenom&quot;]=&gt;
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a>  string(7) &quot;prenom2&quot;
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a>  [&quot;age&quot;]=&gt;
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a>  string(2) &quot;20&quot;
+<span class="normal"><a href="#__codelineno-6-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>object(Person)#4 (3) {
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>  [&quot;nom&quot;:&quot;Person&quot;:private]=&gt;
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a>  string(4) &quot;nom3&quot;
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>  [&quot;prenom&quot;:&quot;Person&quot;:private]=&gt;
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>  string(7) &quot;prenom3&quot;
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a>  [&quot;age&quot;:&quot;Person&quot;:private]=&gt;
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>  string(2) &quot;30&quot;
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a>}
-</code></pre></div></td></tr></table></div>
-<ul>
-  <li>línea 34: se establece el modo de búsqueda del método <b>[fetch] </b>con el método <b>[PDOStatement::setFetchMode]</b>. Este modo se convierte entonces en el modo por defecto mientras no se modifique, ya sea mediante otra operación <b>[PDOStatement::setFetchMode] </b>o pasando un modo como parámetro al método <b>[PDOStatement::fetch], </b>tal y como se ha hecho anteriormente. La operación <b>[setFetchMode(PDO::FETCH_CLASS, &quot;Person&quot;)] </b>indica que la línea leída debe colocarse en un objeto de tipo <b>[Person]</b>. Esta clase debe tener, entre sus atributos, algunos que lleven el nombre de las columnas de la línea leída. Este es el caso de la clase <b>[Person] </b>definida en las líneas 56-63;
-  </li>
-  <li>la línea 36 muestra el siguiente resultado:
-  </li>
-</ul>
-
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
-<span class="normal"><a href="#__codelineno-7-2">2</a></span>
-<span class="normal"><a href="#__codelineno-7-3">3</a></span>
-<span class="normal"><a href="#__codelineno-7-4">4</a></span>
-<span class="normal"><a href="#__codelineno-7-5">5</a></span>
-<span class="normal"><a href="#__codelineno-7-6">6</a></span>
-<span class="normal"><a href="#__codelineno-7-7">7</a></span>
-<span class="normal"><a href="#__codelineno-7-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a>object(Person)#4 (3) {
-<a id="__codelineno-7-2" name="__codelineno-7-2"></a>  [&quot;nom&quot;:&quot;Person&quot;:private]=&gt;
-<a id="__codelineno-7-3" name="__codelineno-7-3"></a>  string(4) &quot;nom3&quot;
-<a id="__codelineno-7-4" name="__codelineno-7-4"></a>  [&quot;prenom&quot;:&quot;Person&quot;:private]=&gt;
-<a id="__codelineno-7-5" name="__codelineno-7-5"></a>  string(7) &quot;prenom3&quot;
-<a id="__codelineno-7-6" name="__codelineno-7-6"></a>  [&quot;age&quot;:&quot;Person&quot;:private]=&gt;
-<a id="__codelineno-7-7" name="__codelineno-7-7"></a>  string(2) &quot;30&quot;
-<a id="__codelineno-7-8" name="__codelineno-7-8"></a>}
 </code></pre></div></td></tr></table></div>
 <ul>
   <li>las líneas 38-43: muestran cómo explotar secuencialmente los resultados de <b>[select]</b>;
@@ -2164,8 +2157,8 @@
 <span id="toc42690714" name="toc42690714" class="odt-bookmark-anchor"></span>
 <span id="toc42690328" name="toc42690328" class="odt-bookmark-anchor"></span>
 <span id="toc42689942" name="toc42689942" class="odt-bookmark-anchor"></span></p>
-<h2 id="127-uso-de-transacciones">12.7. <span style="color: #4f81bd">Uso de transacciones</span></h2>
-<p>Una transacción permite agrupar una secuencia de órdenes SQL en una unidad de ejecución: o bien todas las órdenes se ejecutan correctamente, o bien una de ellas falla y, en ese caso, todas las órdenes SQL que la precedían se anulan. Dicho de otro modo, cuando se utiliza una transacción para ejecutar órdenes SQL, tras su ejecución la base de datos se encuentra en un estado <strong>estable</strong>:</p>
+<h2 id="127-uso-de-transacciones">12.7. <span style="color: #4f81bd"><strong>Uso de transacciones</strong></span></h2>
+<p>Una transacción permite agrupar una secuencia de órdenes SQL en una unidad de ejecución: o bien todas las órdenes se ejecutan correctamente, o bien una de ellas falla y, en ese caso, todas las órdenes SQL que la precedieron se anulan. Dicho de otro modo, cuando se utiliza una transacción para ejecutar órdenes SQL, tras su ejecución la base de datos se encuentra en un estado <strong>estable</strong>:</p>
 <ul>
   <li>o bien en un <b>nuevo estado </b>creado por la ejecución correcta de todas las órdenes SQL de la transacción;
   </li>
@@ -2409,7 +2402,7 @@
   </li>
   <li>se termina con éxito con el método <b>[PDO::commit]</b>;
   </li>
-  <li>se finaliza con un error mediante el método <b>[PDO::rollback]</b>;
+  <li>se termina con un error mediante el método <b>[PDO::rollback]</b>;
   </li>
 </ul>
 
