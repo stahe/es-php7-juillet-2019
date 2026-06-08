@@ -12,11 +12,13 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/es-php7-juillet-2019/index.html">
+        <link rel="canonical" href="https://stahe.github.io/es-php7-juillet-2019/instalacion-de-un-entorno-de-trabajo.html">
       
       
+        <link rel="prev" href="introduccion-al-lenguaje-php-7.html">
       
-        <link rel="next" href="introduccion-al-lenguaje-php-7.html">
+      
+        <link rel="next" href="los-fundamentos-de-php.html">
       
       
         
@@ -27,7 +29,7 @@
     
     
       
-        <title>Una introducción a PHP7 a través de ejemplos</title>
+        <title>2. Instalación de un entorno de trabajo - Una introducción a PHP7 a través de ejemplos</title>
       
     
     
@@ -91,6 +93,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#2-instalacion-de-un-entorno-de-trabajo" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -123,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Bienvenidos
+              2. Instalación de un entorno de trabajo
             
           </span>
         </div>
@@ -268,17 +275,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
         
   
   
@@ -294,7 +294,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -330,10 +329,37 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="instalacion-de-un-entorno-de-trabajo.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. Instalación de un entorno de trabajo
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="instalacion-de-un-entorno-de-trabajo.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -349,6 +375,48 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-instalacion-de-laragon" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1. Instalación de Laragon
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-instalacion-de-ide-netbeans-100" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2. Instalación de IDE Netbeans 10.0
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -964,81 +1032,175 @@
 
 
 
-  <h1>Bienvenidos</h1>
+<p><span id="toc42689807" name="toc42689807" class="odt-bookmark-anchor"></span>
+<span id="toc42690579" name="toc42690579" class="odt-bookmark-anchor"></span>
+<span id="toc42690193" name="toc42690193" class="odt-bookmark-anchor"></span></p>
+<h1 id="2-instalacion-de-un-entorno-de-trabajo">2. <span style="color: #365f91">Instalación de un entorno de trabajo</span></h1>
+<p>Los scripts se han escrito y probado en el siguiente entorno:</p>
+<ul>
+  <li>un entorno de servidor web Apache / SGBD MySQL / PHP 7.3 denominado <b>Laragon;</b>
+  </li>
+  <li>el entorno de desarrollo IDE <b>Netbeans 10.0;</b>
+  </li>
+</ul>
 
-<p><span id="refheadingtoc45841531951845" name="refheadingtoc45841531951845" class="odt-bookmark-anchor"></span><span id="toc42690578" name="toc42690578" class="odt-bookmark-anchor"></span><span id="toc42690192" name="toc42690192" class="odt-bookmark-anchor"></span><span id="toc42689806" name="toc42689806" class="odt-bookmark-anchor"></span><span id="refheadingtoc45839531951845" name="refheadingtoc45839531951845" class="odt-bookmark-anchor"></span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000C8000000E930F662D2.png" width="100" height="117" style="display:inline-block; margin:4px;width:2.646cm;height:3.083cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C8000000E930F662D2.png" /></td><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000000C8000000E90F858128.png" width="100" height="117" style="display:inline-block; margin:4px;width:2.646cm;height:3.083cm;" class="odt-zoomable" data-zoom-src="images/10000000000000C8000000E90F858128.png" /></td></tr></table>
+<p><span id="toc42690580" name="toc42690580" class="odt-bookmark-anchor"></span>
+<span id="toc42690194" name="toc42690194" class="odt-bookmark-anchor"></span>
+<span id="toc42689808" name="toc42689808" class="odt-bookmark-anchor"></span>
+<span id="refheadingtoc45843531951845" name="refheadingtoc45843531951845" class="odt-bookmark-anchor"></span>
+<span id="installationdelaragon" name="installationdelaragon" class="odt-bookmark-anchor"></span></p>
+<h2 id="21-instalacion-de-laragon">2.1. <span style="color: #4f81bd">Instalación de Laragon</span></h2>
+<p>Laragon es un paquete que reúne varios programas:</p>
+<ul>
+  <li>un servidor web Apache. Lo utilizaremos para escribir scripts web en PHP;
+  </li>
+  <li>el SGBD MySQL;
+  </li>
+  <li>el lenguaje de script PHP;
+  </li>
+  <li>un servidor Redis que implementa una caché para aplicaciones web:
+  </li>
+</ul>
 
-<p style="font-size: 28px; font-weight: bold; margin-bottom: 1em; line-height: 1.2; color: #2c3e50;">Introducción al lenguaje PHP7 con ejemplos</p>
+<p>Laragon se puede descargar (marzo de 2019) en la siguiente dirección:</p>
+<p><a href="https://laragon.org/download/"><u><span style="color: #0563c1">https://laragon.org/download/</span></u></a></p>
+<p><img src="images/10000000000005AC000003184BDF25EA.png" width="363" height="198" style="width:9.603cm;height:5.237cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005AC000003184BDF25EA.png" /></p>
+<p><img src="images/100000000000086200000337E13872C5.png" width="536" height="206" style="width:14.19cm;height:5.442cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000086200000337E13872C5.png" /></p>
+<p><img src="images/100000000000088C0000033343F79C47.png" width="547" height="205" style="width:14.469cm;height:5.415cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000088C0000033343F79C47.png" /></p>
+<ul>
+  <li>La instalación <b>[1-5] </b>genera la siguiente estructura de directorios:
+  </li>
+</ul>
 
-<p><strong>Serge Tahé</strong>, julio de 2019</p>
-<hr style="border:0; border-top:0.06pt solid #000000; margin:0.75em 0;" data-odt-border="top" />
-<p>Este documento es una traducción de la <a href="https://stahe.github.io/android-aout-2016/"><u><span style="color: #000080">versión</span></u></a> original <u><span style="color: #000080">en francés</span></u>, generada mediante <a href="https://www.deepl.com/"><u><span style="color: #000080">una herramienta automática</span></u></a>. Es posible que algunas expresiones o términos técnicos no reflejen plenamente el significado original.</p>
-<p><a href="https://stahe.github.io/es-word-odt-vers-html-janv-2026/"><u><span style="color: #0563c1">Este sitio web se creó utilizando el conversor [Word u ODT -&gt; HTML] desarrollado por los sistemas de IA Gemini 3 y ChatGPT 5.2 en enero de 2026</span></u></a>.</p>
-<hr style="border:0; border-top:0.51pt solid #000000; margin:0.75em 0;" data-odt-border="bottom" />
+<p><img src="images/100000000000083D000003996FDD348B.png" width="633" height="276" style="width:16.739cm;height:7.31cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000083D000003996FDD348B.png" /></p>
+<ul>
+  <li>en <b>[6], </b>la carpeta de instalación de PHP;
+  </li>
+</ul>
 
-<p>Mediante el conversor Gemini/ChatGPT, se han generado varios sitios web a partir de documentos ODT de LibreOffice y documentos de Word:</p>
-<p><u><strong>Java</strong></u></p>
+<p>Al iniciar <strong>[Laragon],</strong> aparece la siguiente ventana:</p>
+<p><img src="images/10000000000004F800000346ED7C4AFF.png" width="382" height="252" style="width:10.102cm;height:6.655cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000004F800000346ED7C4AFF.png" /></p>
 <ul>
-<li>[<a href="https://stahe.github.io/es-java-sept-1998/"><u><span style="color: #000080">Introducción al lenguaje Java (1998)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-servlets-java-juin-2002/"><u><span style="color: #000080">Introducción a la programación web en Java con servlets y páginas JSP (2002)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-struts1x-dec-2003/"><u><span style="color: #000080">Introducción a Struts 1.x a través de ejemplos (2003)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-java-web-mvc-mai-2006/"><u><span style="color: #000080">Fundamentos del desarrollo web MVC en Java a través de ejemplos (2006)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-jpa-juin-2007/"><u><span style="color: #000080">Persistencia en Java 5 a través de la práctica (2007)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-webservice-netbeans-glassfish-fev-2009/"><u><span style="color: #000080">Creación de un servicio web Java EE con el IDE NetBeans 6.5 y el servidor Java EE GlassFish (2009)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-struts2-janv-2012/"><u><span style="color: #000080">Introducción a Struts 2 a través de ejemplos (2012)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-jsf2-pf-pfm-juin-2012/"><u><span style="color: #000080">Introducción a Java Server Faces, PrimeFaces y PrimeFaces Mobile con ejemplos (2012)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-javaee-juin-2012/"><u><span style="color: #000080">Introducción a Java EE con el IDE NetBeans y el servidor de aplicaciones GlassFish (2012)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-spring-angular1.x-juillet-2014/"><u><span style="color: #000080">Un ejemplo de cliente/servidor: AngularJS 1.x / Spring 4 (2014)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-java-spring-dec-2015/"><u><span style="color: #000080">Introducción al lenguaje Java y al ecosistema Spring a través de un caso práctico (2015)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-springmvc-thymeleaf-janv-2015/"><u><span style="color: #000080">Introducción a Spring MVC y Thymeleaf a través de ejemplos (2015)</span></u></a>]</li>
-<li>[<a href="https://stahe.github.io/es-spring-database-juin-2015/"><u><span style="color: #000080">Trabajar con una base de datos relacional utilizando el ecosistema Spring (2015)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-rxjava-mai-2016/"><u><span style="color: #000080">Introducción a RxJava. Aplicación a entornos Swing y Android (2016)</span></u></a>];</li>
+  <li><b>[1]</b>: el menú principal de Laragon;
+  </li>
+  <li><b>[2]</b>: el botón <b>[Start All] </b>inicia el servidor web Apache y el SGBD MySQL;
+  </li>
+  <li><b>[3]</b>: el botón <b>[WEB] </b>muestra la página web <b>[http://localhost], </b>que corresponde al archivo PHP <b>[&lt;laragon&gt;/www/index.php], </b>donde &lt;laragon&gt; es la carpeta de instalación de Laragon;
+  </li>
+  <li><b>[4]</b>: el botón <b>[Database] </b>permite gestionar el SGBD y el MySQL con la herramienta <b>[phpMyAdmin]</b>. Es necesario instalarlo previamente;
+  </li>
+  <li><b>[5]</b>: el botón <b>[Terminal] </b>abre un terminal de comandos;
+  </li>
+  <li><b>[6]</b>: el botón <b>[Root] </b>abre un explorador de Windows situado en la carpeta <b>[&lt;laragon&gt;/www], </b>que es la raíz del sitio web <b>[http://localhost]</b>. Ahí es donde hay que colocar todas las aplicaciones web gestionadas por el servidor Apache de Laragon;
+  </li>
 </ul>
-<p><u><strong>Android</strong></u></p>
+
+<p>Abramos un terminal de Laragon <strong>[5]</strong>:</p>
+<p><img src="images/1000000000000745000002AC1D4C0E92.png" width="558" height="205" style="width:14.773cm;height:5.429cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000745000002AC1D4C0E92.png" /></p>
 <ul>
-<li>[<a href="https://stahe.github.io/es-android-aout-2016/"><u><span style="color: #000080">Introducción a la programación para tabletas Android con Android Studio (2016)</span></u></a>];</li>
+  <li>en <b>[1]</b>, el tipo de terminal. Hay tres tipos de terminales disponibles en <b>[6]</b>;
+  </li>
+  <li>en <b>[2, 3]</b>: la carpeta actual;
+  </li>
+  <li>En <b>[4]</b>, se escribe el comando <b>[echo %PATH%], </b>que muestra la lista de carpetas exploradas durante la búsqueda de un ejecutable. Todas las carpetas principales de Laragon están incluidas en esta ruta de ejecutables, lo que no sería el caso si se abriera una ventana de comandos <b>[cmd] </b>en Windows. En este documento, cuando hay que escribir comandos para instalar tal o cual software, estos se escriben generalmente en un terminal de Laragon;
+  </li>
 </ul>
-<p><u>.</u><u><strong>NET</strong></u></p>
+
+<p><span id="toc42690581" name="toc42690581" class="odt-bookmark-anchor"></span>
+<span id="toc42690195" name="toc42690195" class="odt-bookmark-anchor"></span>
+<span id="toc42689809" name="toc42689809" class="odt-bookmark-anchor"></span>
+<span id="refheadingtoc45845531951845" name="refheadingtoc45845531951845" class="odt-bookmark-anchor"></span>
+<span id="installationdelide" name="installationdelide" class="odt-bookmark-anchor"></span></p>
+<h2 id="22-instalacion-de-ide-netbeans-100">2.2. <span style="color: #4f81bd">Instalación de IDE Netbeans 10.0</span></h2>
+<p>El IDE Netbeans 10.0 se puede descargar en la siguiente dirección (marzo de 2019):</p>
+<p><a href="https://netbeans.apache.org/download/index.html"><u><span style="color: #0563c1">https://netbeans.apache.org/download/index.HTML</span></u></a></p>
+<p><img src="images/10000000000007BD0000037EBD90F9D8.png" width="495" height="223" style="width:13.1cm;height:5.913cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007BD0000037EBD90F9D8.png" /></p>
+<p>El archivo descargado es un zip que solo hay que descomprimir. Una vez instalado y ejecutado Netbeans, se puede crear un primer proyecto PHP.</p>
+<p><img src="images/10000000000005C4000001A8D40DAF59.png" width="443" height="127" style="width:11.719cm;height:3.367cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005C4000001A8D40DAF59.png" /></p>
 <ul>
-<li>[<a href="https://stahe.github.io/es-vbnet-mars-2004/"><u><span style="color: #000080">Introducción a VB.NET a través de ejemplos (2004)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-aspnet1.1-avril-2004/"><u><span style="color: #000080">Desarrollo web con ASP.NET 1.1 (2004)</span></u></a>];</li>
-<li>[<u><span style="color: #000080"><a href="https://stahe.github.io/es-springioc-dotnet-avril-2005/">Spring IoC para .NET (2005)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-web3tier-dotnet-avril-2005/"><u><span style="color: #000080">Creación de una aplicación web de tres capas con Spring.NET y VB.NET (2005)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-csharp-mai-2008/"><u><span style="color: #000080">Aprender C# versión 3.0 con .NET Framework 3.5 (2008)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-pam-aspnet-juin-2010/"><u><span style="color: #000080">Creación de una aplicación web de tres capas con ASP.NET 2.0, C#, Spring.NET y NHibernate (2010)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-nhibernate-dotnet-dec-2011/"><u><span style="color: #000080">Introducción al marco NHibernate para la plataforma .NET (2011)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-ef5cf-oct-2012/"><u><span style="color: #000080">Introducción a Entity Framework 5 Code First a través de ejemplos (2012)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-aspnetmvc-nov-2013/"><u><span style="color: #000080">Introducción al marco ASP.NET MVC a través de ejemplos (2013)</span></u></a>];</li>
+  <li>en <b>[1]</b>, seleccione option Archivo / Nuevo proyecto;
+  </li>
+  <li>en <b>[2]</b>, seleccione la categoría <b>[PHP]</b>;
+  </li>
+  <li>en <b>[3]</b>, seleccione el tipo de proyecto <b>[PHP Application]</b>;
+  </li>
 </ul>
-<p><u><strong>JavaScript</strong></u></p>
+
+<p><img src="images/100000000000085A000001CEB2D6C5E9.png" width="641" height="139" style="width:16.97cm;height:3.667cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000085A000001CEB2D6C5E9.png" /></p>
 <ul>
-<li>[<a href="https://stahe.github.io/es-spring-angular1.x-juillet-2014/"><u><span style="color: #000080">Un ejemplo de cliente/servidor: AngularJS 1.x / Spring 4 (2014)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-ecmascript6-oct-2019/"><u><span style="color: #000080">Introducción al lenguaje ECMAScript 6 a través de ejemplos (2019)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-vuejs-oct-2019/"><u><span style="color: #000080">Introducción al marco VUE.JS a través de ejemplos (2019)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-nuxtjs-dec-2019/"><u><span style="color: #000080">Introducción al marco NUXT.JS a través de ejemplos (2019)</span></u></a>];</li>
+  <li>en <b>[4]</b>, asigne un nombre al proyecto;
+  </li>
+  <li>en <b>[5]</b>, elija una carpeta para el proyecto;
+  </li>
+  <li>en <b>[6]</b>, seleccione la version descargada de PHP;
+  </li>
+  <li>en <b>[7]</b>, elija la codificación UTF-8 para los archivos PHP;
+  </li>
+  <li>en <b>[8]</b>, seleccione el modo <b>[Script] </b>para ejecutar los scripts PHP en modo de línea de comandos. Seleccione <b>[Local WEB Server] </b>para ejecutar un script PHP en un entorno web;
+  </li>
+  <li>en <b>[9,10]</b>, indique el directorio de instalación del intérprete PHP del paquete Laragon:
+  </li>
 </ul>
-<p><u><strong>PHP</strong></u></p>
+
+<p><img src="images/10000000000005DC0000025C1FB2220C.png" width="450" height="181" style="width:11.912cm;height:4.796cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000005DC0000025C1FB2220C.png" /></p>
 <ul>
-<li>[<a href="https://stahe.github.io/es-php4mvc-janvier-2004/"><u><span style="color: #000080">Metodología de desarrollo MVC para una aplicación web en PHP4 (2004)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-php5-juillet-2011/"><u><span style="color: #000080">Introducción al lenguaje PHP5 a través de ejemplos (2011)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-php7-juillet-2019/"><u><span style="color: #000080">Introducción al lenguaje PHP7 a través de ejemplos (2019)</span></u></a>];</li>
+  <li>seleccione <b>[Finish] </b>para finalizar el asistente de creación del proyecto PHP;
+  </li>
 </ul>
-<p><u><strong>Python</strong></u></p>
+
+<p><img src="images/100000000000070C0000020CD9C9D0E3.png" width="541" height="157" style="width:14.319cm;height:4.159cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000070C0000020CD9C9D0E3.png" /></p>
 <ul>
-<li>[<a href="https://stahe.github.io/es-python2.7-mars-2012/"><u><span style="color: #000080">Introducción a Python 2.7 a través de ejemplos (2012)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-python-flask-sept-2020/"><u><span style="color: #000080">Introducción al lenguaje Python y al marco web Flask a través de ejemplos (2020)</span></u></a>];</li>
-<li>[<a href="https://stahe.github.io/es-python-ia-sept-2025/"><u><span style="color: #000080">Generar un script de Python utilizando herramientas de IA (2025)</span></u></a>];</li>
+  <li>en <b>[11]</b>, el proyecto se crea con un script <b>[index.php]</b>;
+  </li>
+  <li>en <b>[12]</b>, se escribe un script PHP mínimo;
+  </li>
+  <li>en <b>[13]</b>, se ejecuta <b>[index.php]</b>;
+  </li>
 </ul>
-<p><u><strong>VBScript</strong></u></p>
+
+<p><img src="images/100000000000074C00000147E3253FF8.png" width="561" height="98" style="width:14.833cm;height:2.596cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000074C00000147E3253FF8.png" /></p>
 <ul>
-<li>[<a href="https://stahe.github.io/es-vbscript-janv-2002/"><u><span style="color: #000080">Introducción a VBScript (2002)</span></u></a>];</li>
+  <li>en <b>[14]</b>, los resultados de Netbeans se muestran en la ventana <b>[output]</b>;
+  </li>
+  <li>en <b>[15]</b>, se crea un nuevo script;
+  </li>
+  <li>en <b>[16]</b>, el nuevo script;
+  </li>
 </ul>
-<p><u><strong>SQL</strong></u></p>
+
+<p>El lector podrá crear todos los scripts que siguen en diferentes carpetas del mismo proyecto PHP. Los códigos fuente de los scripts de este documento están disponibles en la siguiente estructura de directorios Netbeans:</p>
+<p><img src="images/1000000000000644000002E5AEA38430.png" width="561" height="259" style="width:14.85cm;height:6.862cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000644000002E5AEA38430.png" /></p>
+<p>Los scripts de este documento se encuentran en la estructura de directorios del proyecto <strong>[scripts-console] [1]</strong>. También utilizaremos las bibliotecas PHP, que se ubicarán en la carpeta <strong>[&lt;laragon-lite&gt;/www/vendor] [2],</strong> donde &lt;laragon-lite&gt; es la carpeta de instalación del software Laragon. Para que Netbeans reconozca las bibliotecas de <strong>[2]</strong> como parte del proyecto <strong>[scripts-console]</strong>, debemos incluir la carpeta <strong>[vendor] [2]</strong> en la rama <strong>[Include Path] [3]</strong> del proyecto. Vamos a configurar Netbeans para que la carpeta <strong>[&lt;laragon-lite&gt;/www/vendor] [2]</strong> se incluya en cualquier proyecto nuevo PHP y no solo en el proyecto <strong>[scripts-console]</strong> :</p>
+<p><img src="images/10000000000007C4000002C3270A2133.png" width="696" height="247" style="width:18.41cm;height:6.548cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/10000000000007C4000002C3270A2133.png" /></p>
 <ul>
-<li>[<a href="https://stahe.github.io/es-sql-firebird-janv-2006/"><u><span style="color: #000080">Introducción al lenguaje SQL con el SGBD Firebird (2006)</span></u></a>];</li>
+  <li>en <b>[1-2]</b>, se accede a las opciones de Netbeans;
+  </li>
+  <li>en <b>[3-4]</b>, se configuran las opciones de PHP;
+  </li>
+  <li>en <b>[5-7]</b>, se configura el <b>[Global Include Path] </b>de PHP: las carpetas indicadas en <b>[7] </b>se incluyen automáticamente en el <b>[Include Path] </b>de cualquier proyecto PHP;
+  </li>
 </ul>
-<p>Todos estos son cursos antiguos que constan de varios cientos de páginas. El tamaño del documento ODT o DOCX no importa para el conversor Gemini/ChatGPT. Lo que le importa son las estructuras que se encuentran en su interior (véase el capítulo:  <a href="https://stahe.github.io/es-word-odt-vers-html-janv-2026/ejemplos-de-este-documento----.html"><u><span style="color: #000080"><u><span style="color: #0563c1">Ejemplos de este documento</span></u></span></u></a>).</p>
+
+<p><img src="images/100000000000025000000231F599A184.png" width="207" height="196" style="width:5.48cm;height:5.195cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/100000000000025000000231F599A184.png" /></p>
+<ul>
+  <li>en <b>[9]</b>, se accede a las propiedades de la rama <b>[Include Path]</b>;
+  </li>
+  <li>en <b>[10-11]</b>, las nuevas bibliotecas exploradas por Netbeans. Netbeans explora el código PHP de estas bibliotecas y memoriza sus clases, interfaces, funciones… para poder ofrecer ayuda al desarrollador;
+  </li>
+</ul>
+
+<p><img src="images/1000000000000403000004FDD8A5CFCC.png" width="360" height="447" style="width:9.513cm;height:11.827cm;" alt="Image" class="odt-zoomable" data-zoom-src="images/1000000000000403000004FDD8A5CFCC.png" /></p>
+<ul>
+  <li>en <b>[12]</b>, un código utiliza la clase <b>[PhpMimeMailParser\Parser] </b>de la biblioteca <b>[vendor/php-mime-mail-parser]</b>;
+  </li>
+  <li>en <b>[13]</b>, Netbeans propone los métodos de esta clase;
+  </li>
+  <li>en <b>[14-15]</b>, Netbeans muestra la documentación del método seleccionado;
+  </li>
+</ul>
+
+<p>El concepto de <strong>[Include Path]</strong> es aquí específico de Netbeans. PHP también tiene este concepto, pero a priori se trata de dos conceptos diferentes.</p>
+<p>Ahora que se ha instalado el entorno de trabajo, podemos abordar los fundamentos de PHP.</p>
 
 
 
